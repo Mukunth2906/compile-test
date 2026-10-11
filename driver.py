@@ -52,6 +52,9 @@ if not cpp or not c:
     )
     raise SystemExit(1)
 
+print(f"Using C++ compiler: {cpp}")
+print(f"Using C compiler: {c}")
+
 # 1. Compile the C++ exam-writer program (creates gen.exe)
 subprocess.run([cpp, "generator.cpp", "-o", "gen.exe"], check=True)
 
